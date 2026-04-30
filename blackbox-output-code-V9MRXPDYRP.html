@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouth Analyzer - AI Dental Check</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0/dist/mobilenet.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦷 Mouth Analyzer</h1>
+            <p>AI-powered dental abnormality detection</p>
+        </div>
+        
+        <div class="camera-container" id="cameraContainer">
+            <video id="video" autoplay playsinline></video>
+            <button class="analyze-btn" id="analyzeBtn">📸 Analyze Mouth</button>
+            <div class="loading hidden" id="loading">
+                <div class="spinner"></div>
+                <div>🤖 Analyzing...</div>
+            </div>
+        </div>
+        
+        <div class="result hidden" id="result">
+            <!-- Dynamic results injected by JS -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
